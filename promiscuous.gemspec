@@ -20,11 +20,11 @@ Gem::Specification.new do |s|
   s.add_dependency "activemodel",         ">= 3"
   s.add_dependency "bunny",               ">= 0.10.7"
   s.add_dependency "amq-protocol",        ">= 1.8.0"
-  s.add_dependency "ruby-progressbar",    "~> 1.2.0"
+  s.add_dependency "ruby-progressbar"#,    "~> 1.2.0"
   s.add_dependency "redis",               "~> 3.0"
   s.add_dependency "algorithms",          "~> 0.6.1"
   s.add_dependency "fnv",                 "0.2.0"
-  s.add_dependency "multi_json",          "~> 1.8.0"
+  s.add_dependency "multi_json"#,          "~> 1.8.0"
   s.add_dependency "robust-redis-lock",   "~> 0.2.2"
 
   s.files        = Dir["lib/**/*"] + Dir["bin/**/*"]
