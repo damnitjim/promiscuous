@@ -3,7 +3,7 @@ module Promiscuous::Subscriber::Model::ActiveRecord
   include Promiscuous::Subscriber::Model::Base
 
   included do
-    if !self.columns.collect(&:name).include?("_v")
+    if !self.columns.collect(&:name).include?("_v") && !ActiveRecord::Migrator.needs_migration?
       raise <<-help
       #{self} must include a _v column.  Create the following migration:
         change_table :#{self.table_name} do |t|
